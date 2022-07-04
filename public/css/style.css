@@ -1,0 +1,15 @@
+#battlebg{
+    background-image: url(../images/pokemon_background2.jpg);
+    background-size: 40vw;
+    height: 40vh;
+    background-repeat: no-repeat;
+}
+#commandes{
+    width: 40vw;
+    height: 20vh;
+    border: 2px solid black;
+    margin-left: 29.15%;
+}
+.skill:hover{
+    border: 1px dotted black !important;
+}
