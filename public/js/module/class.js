@@ -1,9 +1,38 @@
 // Table des types
-const tabTypes = ["acier","combat","dragon","eau","électrique","fée","feu","glace","insecte",
+export const tabTypes = ["acier","combat","dragon","eau","électrique","fée","feu","glace","insecte",
 "normal","plante","poison","psy","roche","sol","spectre","ténèbres","vol"]
 
+// Paramètres jauges de vie
+export let pvadversaire = document.getElementsByTagName('div')[4]
+export let pvpersonnage = document.getElementsByTagName('div')[8]
+
+// Jauges PV
+export let jaugeadv = document.getElementsByTagName('div')[4].innerHTML
+export let jaugemain = document.getElementsByTagName('div')[8].innerHTML
+
+// Création de la classe d'Attaque des Pokémons
+export class Attaques {
+    constructor(nom,puissance,precision,pp,type){
+        this.nom = nom
+        this.puissance = puissance
+        this.precision = precision
+        this.pp = pp
+        this.type = type
+    }
+}
+
+// Création des Techniques
+export let vampipoing = new Attaques ("Vampi-Poing",75,100,10,"combat")
+export let machpunch = new Attaques ("Mach Punch",40,100,30,"combat")
+export let poingeclair = new Attaques ("Poing Eclair",75,100,15,"électrique")
+export let tourrapide = new Attaques ("Tour Rapide",20,100,40,"normal")
+export let piedvoltige = new Attaques ("Pied Voltige",130,90,10,"combat")
+export let sabotage = new Attaques ("Sabotage",65,100,20,"ténèbres")
+export let lamederoc = new Attaques ("Lame de Roc",100,80,5,"roche")
+export let directtoxic = new Attaques ("Direct Toxik",80,100,20,"poison")
+
 // Création de la classe Pokémon
-class Pokemon {
+export class Pokemon {
     constructor(nom,pv,attaque,defense,attaqueSp,defenseSp,vitesse,type,btn1,btn2,btn3,btn4){
         this.nom = nom
         this.pv = pv
@@ -18,21 +47,30 @@ class Pokemon {
         this.btn3 = btn3
         this.btn4 = btn4
     }
-}
-
-// Création de la classe d'Attaque des Pokémons
-class Attaques {
-    constructor(nom,puissance,precision,pp,type){
-        this.nom = nom
-        this.puissance = puissance
-        this.precision = precision
-        this.pp = pp
-        this.type = type
+    attaque1(x){
+        const viemax = kicklee.pv
+        console.log(viemax);
+        x.pv -= this.btn1.puissance
+        console.log(x.pv);
+        let viereste = 100-Math.floor((x.pv/viemax)*100)
+        console.log(viereste);
+        // pvadversaire.removeAttribute("style")
+        // pvadversaire.setAttribute("style",`width: ${100-Math.floor((this.btn1.puissance/viemax)*100)}%`)
+    }
+    attaque2(x){
+        x.pv -= this.btn2.puissance
+    }
+    attaque3(x){
+        x.pv -= this.btn3.puissance
+    }
+    attaque4(x){
+        x.pv -= this.btn4.puissance
     }
 }
 
 // Création du Pokémon Tygnon
-let tygnon = new Pokemon("Tygnon",50,105,79,35,110,76,"combat")
+export let tygnon = new Pokemon("Tygnon",100,339,282,185,350,276,"combat",vampipoing,machpunch,poingeclair,tourrapide)
 
 // Création du Pokémon Kicklee
-let kicklee = new Pokemon("Kicklee",50,120,53,35,110,87,"combat")
+export let kicklee = new Pokemon("Kicklee",100,372,225,185,350,300,"combat",piedvoltige,sabotage,lamederoc,directtoxic)
+
