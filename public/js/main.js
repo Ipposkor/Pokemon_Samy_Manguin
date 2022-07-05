@@ -24,6 +24,9 @@ let atk2 = document.querySelectorAll('button')[1]
 let atk3 = document.querySelectorAll('button')[2]
 let atk4 = document.querySelectorAll('button')[3]
 
+// section techniques
+let tableauAtk = document.getElementById('commandes')
+
 // Attribution des noms des attaques
 atk1.innerHTML = tygnon.btn1.nom
 atk2.innerHTML = tygnon.btn2.nom
@@ -33,43 +36,7 @@ atk4.innerHTML = tygnon.btn4.nom
 // Texte combat
 let txtCombat = document.getElementById('textCombat')
 
-// Fonctions des boutons d'attaque
-atk1.addEventListener('click', function () {
-    tygnon.attaque1(kicklee)
-    setTimeout(() => {
-        kicklee.attaqueAdv(tygnon)
-    }, 1500);
-    setTimeout(() => {
-        txtCombat.innerHTML = "Choisissez une Action !"
-    }, 4000);
-})
-atk2.addEventListener('click', function () {
-    tygnon.attaque2(kicklee)
-    setTimeout(() => {
-        kicklee.attaqueAdv(tygnon)
-    }, 1500);
-    setTimeout(() => {
-        txtCombat.innerHTML = "Choisissez une Action !"
-    }, 4000);
-})
-atk3.addEventListener('click', function () {
-    tygnon.attaque3(kicklee)
-    setTimeout(() => {
-        kicklee.attaqueAdv(tygnon)
-    }, 1500);
-    setTimeout(() => {
-        txtCombat.innerHTML = "Choisissez une Action !"
-    }, 4000);
-})
-atk4.addEventListener('click', function () {
-    tygnon.attaque4(kicklee)
-    setTimeout(() => {
-        kicklee.attaqueAdv(tygnon)
-    }, 1500);
-    setTimeout(() => {
-        txtCombat.innerHTML = "Choisissez une Action !"
-    }, 4000);
-})
+
 
 // Boutons de langue
 let fr = document.getElementById('fr')
@@ -194,3 +161,101 @@ gen4.addEventListener('click', function () {
     spriteTygnon.setAttribute("src", "https://www.pokencyclopedia.info/sprites/gen4/spr-b_hgss/b_hs_107_1.png")
 })
 
+// Fonctions des boutons d'attaque
+atk1.addEventListener('click', function () {
+    if (kicklee.pv < 0) {
+        txtCombat.innerHTML = "Vous avez battu Kicklee !"
+    }
+    if (tygnon.pv > 0 && kicklee.pv > 0) {
+        tygnon.attaque1(kicklee)
+        setTimeout(() => {
+            if (kicklee.pv > 0) {
+                kicklee.attaqueAdv(tygnon)
+            } else {
+                txtCombat.innerHTML = "Vous avez battu Kicklee !"
+            }
+        }, 1500);
+        setTimeout(() => {
+            txtCombat.innerHTML = "Choisissez une Action !"
+        }, 4000);
+    } else if (tygnon.pv > 0 && kicklee.pv < 0) {
+        txtCombat.innerHTML = "Vous avez mis KO Kicklee !"
+        spriteKicklee.removeAttribute('src')
+    } else {
+        txtCombat.innerHTML = "Vous avez perdu !"
+        spriteTygnon.removeAttribute('src')
+    }
+})
+atk2.addEventListener('click', function () {
+    if (kicklee.pv < 0) {
+        txtCombat.innerHTML = "Vous avez battu Kicklee !"
+    }
+    if (tygnon.pv > 0 && kicklee.pv > 0) {
+        tygnon.attaque2(kicklee)
+        setTimeout(() => {
+            if (kicklee.pv > 0) {
+                kicklee.attaqueAdv(tygnon)
+            } else {
+                txtCombat.innerHTML = "Vous avez battu Kicklee !"
+            }
+        }, 1500);
+        setTimeout(() => {
+            txtCombat.innerHTML = "Choisissez une Action !"
+        }, 4000);
+    } else if (tygnon.pv > 0 && kicklee.pv < 0) {
+        txtCombat.innerHTML = "Vous avez mis KO Kicklee !"
+        spriteKicklee.removeAttribute('src')
+    } else {
+        txtCombat.innerHTML = "Vous avez perdu !"
+        spriteTygnon.removeAttribute('src')
+    }
+
+})
+atk3.addEventListener('click', function () {
+    if (kicklee.pv < 0) {
+        txtCombat.innerHTML = "Vous avez battu Kicklee !"
+    }
+    if (tygnon.pv > 0 && kicklee.pv > 0) {
+        tygnon.attaque3(kicklee)
+        setTimeout(() => {
+            if (kicklee.pv > 0) {
+                kicklee.attaqueAdv(tygnon)
+            } else {
+                txtCombat.innerHTML = "Vous avez battu Kicklee !"
+            }
+        }, 1500);
+        setTimeout(() => {
+            txtCombat.innerHTML = "Choisissez une Action !"
+        }, 4000);
+    } else if (tygnon.pv > 0 && kicklee.pv < 0) {
+        txtCombat.innerHTML = "Vous avez mis KO Kicklee !"
+        spriteKicklee.removeAttribute('src')
+    } else {
+        txtCombat.innerHTML = "Vous avez perdu !"
+        spriteTygnon.removeAttribute('src')
+    }
+})
+atk4.addEventListener('click', function () {
+    if (kicklee.pv < 0) {
+        txtCombat.innerHTML = "Vous avez battu Kicklee !"
+    }
+    if (tygnon.pv > 0 && kicklee.pv > 0) {
+        tygnon.attaque4(kicklee)
+        setTimeout(() => {
+            if (kicklee.pv > 0) {
+                kicklee.attaqueAdv(tygnon)
+            } else {
+                txtCombat.innerHTML = "Vous avez battu Kicklee !"
+            }
+        }, 1500);
+        setTimeout(() => {
+            txtCombat.innerHTML = "Choisissez une Action !"
+        }, 4000);
+    } else if (tygnon.pv > 0 && kicklee.pv < 0) {
+        txtCombat.innerHTML = "Vous avez mis KO Kicklee !"
+        spriteKicklee.removeAttribute('src')
+    } else {
+        txtCombat.innerHTML = "Vous avez perdu !"
+        spriteTygnon.removeAttribute('src')
+    }
+})

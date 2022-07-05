@@ -28,3 +28,12 @@
 .parametres{
     margin-left: 29.15%;
 }
+
+#commandes1{
+    display: none;
+}
+
+.sexe{
+    color: rgb(1, 1, 164);
+    font-weight: bolder;
+}
