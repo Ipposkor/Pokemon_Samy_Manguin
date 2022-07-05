@@ -19,4 +19,60 @@ atk1.addEventListener('click',function(){
         kicklee.pv = 0
         console.log(`${kicklee.nom} est mort,\nVous ne pouvez plus attaquer`);
     }
+    setTimeout(() => {
+        if (tygnon.pv >0){
+            kicklee.attaqueAdv(tygnon)
+            } else {
+                tygnon.pv = 0
+                console.log(`${tygnon.nom} est mort,\nVous ne pouvez plus attaquer`);
+            }
+    }, 1500);
+})
+atk2.addEventListener('click',function(){
+    if (kicklee.pv >0){
+    tygnon.attaque2(kicklee)
+    } else {
+        kicklee.pv = 0
+        console.log(`${kicklee.nom} est mort,\nVous ne pouvez plus attaquer`);
+    }
+    setTimeout(() => {
+        if (tygnon.pv >0){
+            kicklee.attaqueAdv(tygnon)
+            } else {
+                tygnon.pv = 0
+                console.log(`${tygnon.nom} est mort,\nVous ne pouvez plus attaquer`);
+            }
+    }, 1500);
+})
+atk3.addEventListener('click',function(){
+    if (kicklee.pv >0){
+    tygnon.attaque3(kicklee)
+    } else {
+        kicklee.pv = 0
+        console.log(`${kicklee.nom} est mort,\nVous ne pouvez plus attaquer`);
+    }
+    setTimeout(() => {
+        if (tygnon.pv >0){
+            kicklee.attaqueAdv(tygnon)
+            } else {
+                tygnon.pv = 0
+                console.log(`${tygnon.nom} est mort,\nVous ne pouvez plus attaquer`);
+            }
+    }, 1500);
+})
+atk4.addEventListener('click',function(){
+    if (kicklee.pv >0){
+    tygnon.attaque4(kicklee)
+    } else {
+        kicklee.pv = 0
+        console.log(`${kicklee.nom} est mort,\nVous ne pouvez plus attaquer`);
+    }
+    setTimeout(() => {
+        if (tygnon.pv >0){
+            kicklee.attaqueAdv(tygnon)
+            } else {
+                tygnon.pv = 0
+                console.log(`${tygnon.nom} est mort,\nVous ne pouvez plus attaquer`);
+            }
+    }, 1500);
 })
