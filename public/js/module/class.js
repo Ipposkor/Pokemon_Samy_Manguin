@@ -11,10 +11,6 @@ let txtCombat = document.getElementById('textCombat')
 export let pvadversaire = document.getElementsByTagName('div')[4]
 export let pvpersonnage = document.getElementsByTagName('div')[8]
 
-// Jauges PV
-export let jaugeadv = document.getElementsByTagName('div')[4].innerHTML
-export let jaugemain = document.getElementsByTagName('div')[8].innerHTML
-
 // Création de la classe d'Attaque des Pokémons
 export class Attaques {
     constructor(nom, puissance, precision, pp, type) {
@@ -56,8 +52,8 @@ export class Pokemon {
     attaque1(x) {
         const viemax = 100
         x.pv -= this.btn1.puissance
-        console.log(`${this.nom} utilise ${this.btn1.nom} !\nIl inflige ${this.btn1.puissance} points de dégats\n${x.nom} a ${x.pv} PV`);
-        txtCombat.innerHTML = `${this.nom} utilise ${this.btn1.nom} !\nIl inflige ${this.btn1.puissance} points de dégats et vol de la vie ! \n${x.nom} a ${x.pv} PV`
+        console.log(`${this.nom} utilise ${this.btn1.nom} !\nIl inflige ${this.btn1.puissance} points de dégats !`);
+        txtCombat.innerHTML = `${this.nom} utilise ${this.btn1.nom} !\nIl inflige ${this.btn1.puissance} points de dégats et vol de la vie !`
         switch (this.pv){
             case 97:
                 this.pv += 3;
@@ -84,13 +80,19 @@ export class Pokemon {
         }
         pvadversaire.removeAttribute("style")
         pvadversaire.setAttribute("style", `width: ${100-viereste}%`)
+        if(viereste >=100){
+            pvadversaire.innerHTML = 0
+            pvadversaire.className = "adversaire progress-bar bg-white text-black progress-bar-animated"
+        } else{
+            pvadversaire.innerHTML = viemax-viereste
+        }
     }
     // Attaque 2 Main
     attaque2(x) {
         const viemax = 100
         x.pv -= this.btn2.puissance
-        console.log(`${this.nom} utilise ${this.btn2.nom} !\nIl inflige ${this.btn2.puissance} points de dégats\n${x.nom} a ${x.pv} PV`);
-        txtCombat.innerHTML = `${this.nom} utilise ${this.btn2.nom} !\nIl inflige ${this.btn2.puissance} points de dégats\n${x.nom} a ${x.pv} PV`
+        console.log(`${this.nom} utilise ${this.btn2.nom} !\nIl inflige ${this.btn2.puissance} points de dégats !`);
+        txtCombat.innerHTML = `${this.nom} utilise ${this.btn2.nom} !\nIl inflige ${this.btn2.puissance} points de dégats !`
         let viereste = 100 - Math.floor((x.pv / viemax) * 100)
         if (viereste > 51 && viereste < 81){
             pvadversaire.className = "adversaire progress-bar bg-warning progress-bar-animated"
@@ -100,13 +102,19 @@ export class Pokemon {
         }
         pvadversaire.removeAttribute("style")
         pvadversaire.setAttribute("style", `width: ${100-viereste}%`)
+        if(viereste >=100){
+            pvadversaire.innerHTML = 0
+            pvadversaire.className = "adversaire progress-bar bg-white text-black progress-bar-animated"
+        } else{
+            pvadversaire.innerHTML = viemax-viereste
+        }
     }
     // Attaque 3 Main
     attaque3(x) {
         const viemax = 100
         x.pv -= this.btn3.puissance
-        console.log(`${this.nom} utilise ${this.btn3.nom} !\nIl inflige ${this.btn3.puissance} points de dégats\n${x.nom} a ${x.pv} PV`);
-        txtCombat.innerHTML = `${this.nom} utilise ${this.btn3.nom} !\nIl inflige ${this.btn3.puissance} points de dégats\n${x.nom} a ${x.pv} PV`
+        console.log(`${this.nom} utilise ${this.btn3.nom} !\nIl inflige ${this.btn3.puissance} points de dégats !`);
+        txtCombat.innerHTML = `${this.nom} utilise ${this.btn3.nom} !\nIl inflige ${this.btn3.puissance} points de dégats !`
         let viereste = 100 - Math.floor((x.pv / viemax) * 100)
         if (viereste > 51 && viereste < 81){
             pvadversaire.className = "adversaire progress-bar bg-warning progress-bar-animated"
@@ -116,13 +124,19 @@ export class Pokemon {
         }
         pvadversaire.removeAttribute("style")
         pvadversaire.setAttribute("style", `width: ${100-viereste}%`)
+        if(viereste >=100){
+            pvadversaire.innerHTML = 0
+            pvadversaire.className = "adversaire progress-bar bg-white text-black progress-bar-animated"
+        } else{
+            pvadversaire.innerHTML = viemax-viereste
+        }
     }
     // Attaque 4 Main
     attaque4(x) {
         const viemax = 100
         x.pv -= this.btn4.puissance
-        console.log(`${this.nom} utilise ${this.btn4.nom} !\nIl inflige ${this.btn4.puissance} points de dégats\n${x.nom} a ${x.pv} PV`);
-        txtCombat.innerHTML = `${this.nom} utilise ${this.btn4.nom} !\nIl inflige ${this.btn4.puissance} points de dégats\n${x.nom} a ${x.pv} PV`
+        console.log(`${this.nom} utilise ${this.btn4.nom} !\nIl inflige ${this.btn4.puissance} points de dégats !`);
+        txtCombat.innerHTML = `${this.nom} utilise ${this.btn4.nom} !\nIl inflige ${this.btn4.puissance} points de dégats !`
         let viereste = 100 - Math.floor((x.pv / viemax) * 100)
         if (viereste > 51 && viereste < 81){
             pvadversaire.className = "adversaire progress-bar bg-warning progress-bar-animated"
@@ -132,13 +146,19 @@ export class Pokemon {
         }
         pvadversaire.removeAttribute("style")
         pvadversaire.setAttribute("style", `width: ${100-viereste}%`)
+        if(viereste >=100){
+            pvadversaire.innerHTML = 0
+            pvadversaire.className = "adversaire progress-bar bg-white text-black progress-bar-animated"
+        } else{
+            pvadversaire.innerHTML = viemax-viereste
+        }
     }
     // Attaque 1 Adversaire
     attaque1Adv(x) {
         const viemaxAdv = 100
         x.pv -= this.btn1.puissance
-        console.log(`${this.nom} utilise ${this.btn1.nom} !\nIl inflige ${this.btn1.puissance} points de dégats\n${x.nom} a ${x.pv} PV`);
-        txtCombat.innerHTML = `${this.nom} utilise ${this.btn1.nom} !\nIl inflige ${this.btn1.puissance} points de dégats\n${x.nom} a ${x.pv} PV`
+        console.log(`${this.nom} utilise ${this.btn1.nom} !\nIl inflige ${this.btn1.puissance} points de dégats !`);
+        txtCombat.innerHTML = `${this.nom} utilise ${this.btn1.nom} !\nIl inflige ${this.btn1.puissance} points de dégats !`
         let vieresteAdv = 100 - Math.floor((x.pv / viemaxAdv) * 100)
         if (vieresteAdv > 51 && vieresteAdv < 81){
             pvpersonnage.className = "personnage progress-bar bg-warning progress-bar-animated"
@@ -148,13 +168,19 @@ export class Pokemon {
         }
         pvpersonnage.removeAttribute("style")
         pvpersonnage.setAttribute("style", `width: ${100-vieresteAdv}%`)
+        if(vieresteAdv >=100){
+            pvpersonnage.innerHTML = 0
+            pvpersonnage.className = "personnage progress-bar bg-white text-black progress-bar-animated"
+        } else{
+            pvpersonnage.innerHTML = viemaxAdv-vieresteAdv
+        }
     }
     // Attaque 2 Adversaire
     attaque2Adv(x) {
         const viemaxAdv = 100
         x.pv -= this.btn2.puissance
-        console.log(`${this.nom} utilise ${this.btn2.nom} !\nIl inflige ${this.btn2.puissance} points de dégats\n${x.nom} a ${x.pv} PV`);
-        txtCombat.innerHTML = `${this.nom} utilise ${this.btn2.nom} !\nIl inflige ${this.btn2.puissance} points de dégats\n${x.nom} a ${x.pv} PV`
+        console.log(`${this.nom} utilise ${this.btn2.nom} !\nIl inflige ${this.btn2.puissance} points de dégats !`);
+        txtCombat.innerHTML = `${this.nom} utilise ${this.btn2.nom} !\nIl inflige ${this.btn2.puissance} points de dégats !`
         let vieresteAdv = 100 - Math.floor((x.pv / viemaxAdv) * 100)
         if (vieresteAdv > 51 && vieresteAdv < 81){
             pvpersonnage.className = "personnage progress-bar bg-warning progress-bar-animated"
@@ -164,13 +190,19 @@ export class Pokemon {
         }
         pvpersonnage.removeAttribute("style")
         pvpersonnage.setAttribute("style", `width: ${100-vieresteAdv}%`)
+        if(vieresteAdv >=100){
+            pvpersonnage.innerHTML = 0
+            pvpersonnage.className = "personnage progress-bar bg-white text-black progress-bar-animated"
+        } else{
+            pvpersonnage.innerHTML = viemaxAdv-vieresteAdv
+        }
     }
     // Attaque 3 Adversaire
     attaque3Adv(x) {
         const viemaxAdv = 100
         x.pv -= this.btn3.puissance
-        console.log(`${this.nom} utilise ${this.btn3.nom} !\nIl inflige ${this.btn3.puissance} points de dégats\n${x.nom} a ${x.pv} PV`);
-        txtCombat.innerHTML = `${this.nom} utilise ${this.btn3.nom} !\nIl inflige ${this.btn3.puissance} points de dégats\n${x.nom} a ${x.pv} PV`
+        console.log(`${this.nom} utilise ${this.btn3.nom} !\nIl inflige ${this.btn3.puissance} points de dégats !`);
+        txtCombat.innerHTML = `${this.nom} utilise ${this.btn3.nom} !\nIl inflige ${this.btn3.puissance} points de dégats !`
         let vieresteAdv = 100 - Math.floor((x.pv / viemaxAdv) * 100)
         if (vieresteAdv > 51 && vieresteAdv < 81){
             pvpersonnage.className = "personnage progress-bar bg-warning progress-bar-animated"
@@ -180,13 +212,19 @@ export class Pokemon {
         }
         pvpersonnage.removeAttribute("style")
         pvpersonnage.setAttribute("style", `width: ${100-vieresteAdv}%`)
+        if(vieresteAdv >=100){
+            pvpersonnage.innerHTML = 0
+            pvpersonnage.className = "personnage progress-bar bg-white text-black progress-bar-animated"
+        } else{
+            pvpersonnage.innerHTML = viemaxAdv-vieresteAdv
+        }
     }
     // Attaque 4 Adversaire
     attaque4Adv(x) {
         const viemaxAdv = 100
         x.pv -= this.btn4.puissance
-        console.log(`${this.nom} utilise ${this.btn4.nom} !\nIl inflige ${this.btn4.puissance} points de dégats\n${x.nom} a ${x.pv} PV`);
-        txtCombat.innerHTML = `${this.nom} utilise ${this.btn4.nom} !\nIl inflige ${this.btn4.puissance} points de dégats\n${x.nom} a ${x.pv} PV`
+        console.log(`${this.nom} utilise ${this.btn4.nom} !\nIl inflige ${this.btn4.puissance} points de dégats !`);
+        txtCombat.innerHTML = `${this.nom} utilise ${this.btn4.nom} !\nIl inflige ${this.btn4.puissance} points de dégats !`
         let vieresteAdv = 100 - Math.floor((x.pv / viemaxAdv) * 100)
         if (vieresteAdv > 51 && vieresteAdv < 81){
             pvpersonnage.className = "personnage progress-bar bg-warning progress-bar-animated"
@@ -196,6 +234,12 @@ export class Pokemon {
         }
         pvpersonnage.removeAttribute("style")
         pvpersonnage.setAttribute("style", `width: ${100-vieresteAdv}%`)
+        if(vieresteAdv >=100){
+            pvpersonnage.innerHTML = 0
+            pvpersonnage.className = "personnage progress-bar bg-white text-black progress-bar-animated"
+        } else{
+            pvpersonnage.innerHTML = viemaxAdv-vieresteAdv
+        }
     }
     // Attaque random de l'Adversaire
     attaqueAdv(x) {

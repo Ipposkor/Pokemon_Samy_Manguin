@@ -14,8 +14,6 @@ import {
     directtoxic,
     pvadversaire,
     pvpersonnage,
-    jaugeadv,
-    jaugemain
 } from "./module/class.js";
 
 // selection des slots d'attaque
@@ -48,9 +46,9 @@ let jp = document.getElementById('jp')
 // Français
 fr.addEventListener('click', function () {
     let poke1 = document.getElementById('kicklee')
-    poke1.innerHTML = "Kicklee"
+    poke1.innerHTML = "Kicklee ♂"
     let poke2 = document.getElementById('tygnon')
-    poke2.innerHTML = "Tygnon"
+    poke2.innerHTML = "Tygnon ♂"
     let atk1txt = document.getElementById('atk1')
     atk1txt.innerHTML = "Vampi-Poing"
     let atk2txt = document.getElementById('atk2')
@@ -78,9 +76,9 @@ fr.addEventListener('click', function () {
 // Anglais
 eng.addEventListener('click', function () {
     let poke1 = document.getElementById('kicklee')
-    poke1.innerHTML = "Hitmonlee"
+    poke1.innerHTML = "Hitmonlee ♂"
     let poke2 = document.getElementById('tygnon')
-    poke2.innerHTML = "Hitmonchan"
+    poke2.innerHTML = "Hitmonchan ♂"
     let atk1txt = document.getElementById('atk1')
     atk1txt.innerHTML = "Drain Punch"
     let atk2txt = document.getElementById('atk2')
@@ -108,9 +106,9 @@ eng.addEventListener('click', function () {
 //Japonais
 jp.addEventListener('click', function () {
     let poke1 = document.getElementById('kicklee')
-    poke1.innerHTML = "サワムラー"
+    poke1.innerHTML = "サワムラー ♂"
     let poke2 = document.getElementById('tygnon')
-    poke2.innerHTML = "エビワラー"
+    poke2.innerHTML = "エビワラー ♂"
     let atk1txt = document.getElementById('atk1')
     atk1txt.innerHTML = "ドレインパンチ"
     let atk2txt = document.getElementById('atk2')
