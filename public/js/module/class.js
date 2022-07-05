@@ -110,63 +110,63 @@ export class Pokemon {
     }
     // Attaque 1 Adversaire
     attaque1Adv(x) {
-        const viemax = 100
-        x.pv -= this.btn4.puissance
+        const viemaxAdv = 100
+        x.pv -= this.btn1.puissance
         console.log(`${this.nom} utilise ${this.btn1.nom} !\nIl inflige ${this.btn1.puissance} points de dégats\n${x.nom} a ${x.pv} PV`);
-        let viereste = 100 - Math.floor((x.pv / viemax) * 100)
-        if (viereste > 51 && viereste < 81){
+        let vieresteAdv = 100 - Math.floor((x.pv / viemaxAdv) * 100)
+        if (vieresteAdv > 51 && vieresteAdv < 81){
             pvpersonnage.className = "personnage progress-bar bg-warning progress-bar-animated"
         }
-        if (viereste >= 81){
+        if (vieresteAdv >= 81){
             pvpersonnage.className = "personnage progress-bar bg-danger progress-bar-animated"
         }
         pvpersonnage.removeAttribute("style")
-        pvpersonnage.setAttribute("style", `width: ${100-viereste}%`)
+        pvpersonnage.setAttribute("style", `width: ${100-vieresteAdv}%`)
     }
     // Attaque 2 Adversaire
     attaque2Adv(x) {
-        const viemax = 100
-        x.pv -= this.btn4.puissance
+        const viemaxAdv = 100
+        x.pv -= this.btn2.puissance
         console.log(`${this.nom} utilise ${this.btn2.nom} !\nIl inflige ${this.btn2.puissance} points de dégats\n${x.nom} a ${x.pv} PV`);
-        let viereste = 100 - Math.floor((x.pv / viemax) * 100)
-        if (viereste > 51 && viereste < 81){
+        let vieresteAdv = 100 - Math.floor((x.pv / viemaxAdv) * 100)
+        if (vieresteAdv > 51 && vieresteAdv < 81){
             pvpersonnage.className = "personnage progress-bar bg-warning progress-bar-animated"
         }
-        if (viereste >= 81){
+        if (vieresteAdv >= 81){
             pvpersonnage.className = "personnage progress-bar bg-danger progress-bar-animated"
         }
         pvpersonnage.removeAttribute("style")
-        pvpersonnage.setAttribute("style", `width: ${100-viereste}%`)
+        pvpersonnage.setAttribute("style", `width: ${100-vieresteAdv}%`)
     }
     // Attaque 3 Adversaire
     attaque3Adv(x) {
-        const viemax = 100
-        x.pv -= this.btn4.puissance
+        const viemaxAdv = 100
+        x.pv -= this.btn3.puissance
         console.log(`${this.nom} utilise ${this.btn3.nom} !\nIl inflige ${this.btn3.puissance} points de dégats\n${x.nom} a ${x.pv} PV`);
-        let viereste = 100 - Math.floor((x.pv / viemax) * 100)
-        if (viereste > 51 && viereste < 81){
+        let vieresteAdv = 100 - Math.floor((x.pv / viemaxAdv) * 100)
+        if (vieresteAdv > 51 && vieresteAdv < 81){
             pvpersonnage.className = "personnage progress-bar bg-warning progress-bar-animated"
         }
-        if (viereste >= 81){
+        if (vieresteAdv >= 81){
             pvpersonnage.className = "personnage progress-bar bg-danger progress-bar-animated"
         }
         pvpersonnage.removeAttribute("style")
-        pvpersonnage.setAttribute("style", `width: ${100-viereste}%`)
+        pvpersonnage.setAttribute("style", `width: ${100-vieresteAdv}%`)
     }
     // Attaque 4 Adversaire
     attaque4Adv(x) {
-        const viemax = 100
+        const viemaxAdv = 100
         x.pv -= this.btn4.puissance
         console.log(`${this.nom} utilise ${this.btn4.nom} !\nIl inflige ${this.btn4.puissance} points de dégats\n${x.nom} a ${x.pv} PV`);
-        let viereste = 100 - Math.floor((x.pv / viemax) * 100)
-        if (viereste > 51 && viereste < 81){
+        let vieresteAdv = 100 - Math.floor((x.pv / viemaxAdv) * 100)
+        if (vieresteAdv > 51 && vieresteAdv < 81){
             pvpersonnage.className = "personnage progress-bar bg-warning progress-bar-animated"
         }
-        if (viereste >= 81){
+        if (vieresteAdv >= 81){
             pvpersonnage.className = "personnage progress-bar bg-danger progress-bar-animated"
         }
         pvpersonnage.removeAttribute("style")
-        pvpersonnage.setAttribute("style", `width: ${100-viereste}%`)
+        pvpersonnage.setAttribute("style", `width: ${100-vieresteAdv}%`)
     }
     // Attaque random de l'Adversaire
     attaqueAdv(x) {

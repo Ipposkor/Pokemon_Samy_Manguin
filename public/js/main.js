@@ -12,6 +12,7 @@ atk2.innerHTML = tygnon.btn2.nom
 atk3.innerHTML = tygnon.btn3.nom
 atk4.innerHTML = tygnon.btn4.nom
 
+// Fonctions des boutons d'attaque
 atk1.addEventListener('click',function(){
     if (kicklee.pv >0){
     tygnon.attaque1(kicklee)
