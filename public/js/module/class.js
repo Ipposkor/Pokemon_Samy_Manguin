@@ -1,7 +1,11 @@
+
 // Table des types
 export const tabTypes = ["acier", "combat", "dragon", "eau", "électrique", "fée", "feu", "glace", "insecte",
     "normal", "plante", "poison", "psy", "roche", "sol", "spectre", "ténèbres", "vol"
 ]
+
+// Texte combat
+let txtCombat = document.getElementById('textCombat')
 
 // Paramètres jauges de vie
 export let pvadversaire = document.getElementsByTagName('div')[4]
@@ -53,6 +57,7 @@ export class Pokemon {
         const viemax = 100
         x.pv -= this.btn1.puissance
         console.log(`${this.nom} utilise ${this.btn1.nom} !\nIl inflige ${this.btn1.puissance} points de dégats\n${x.nom} a ${x.pv} PV`);
+        txtCombat.innerHTML = `${this.nom} utilise ${this.btn1.nom} !\nIl inflige ${this.btn1.puissance} points de dégats\n${x.nom} a ${x.pv} PV`
         let viereste = 100 - Math.floor((x.pv / viemax) * 100)
         if (viereste > 51 && viereste < 81){
             pvadversaire.className = "adversaire progress-bar bg-warning progress-bar-animated"
@@ -68,6 +73,7 @@ export class Pokemon {
         const viemax = 100
         x.pv -= this.btn2.puissance
         console.log(`${this.nom} utilise ${this.btn2.nom} !\nIl inflige ${this.btn2.puissance} points de dégats\n${x.nom} a ${x.pv} PV`);
+        txtCombat.innerHTML = `${this.nom} utilise ${this.btn2.nom} !\nIl inflige ${this.btn2.puissance} points de dégats\n${x.nom} a ${x.pv} PV`
         let viereste = 100 - Math.floor((x.pv / viemax) * 100)
         if (viereste > 51 && viereste < 81){
             pvadversaire.className = "adversaire progress-bar bg-warning progress-bar-animated"
@@ -83,6 +89,7 @@ export class Pokemon {
         const viemax = 100
         x.pv -= this.btn3.puissance
         console.log(`${this.nom} utilise ${this.btn3.nom} !\nIl inflige ${this.btn3.puissance} points de dégats\n${x.nom} a ${x.pv} PV`);
+        txtCombat.innerHTML = `${this.nom} utilise ${this.btn3.nom} !\nIl inflige ${this.btn3.puissance} points de dégats\n${x.nom} a ${x.pv} PV`
         let viereste = 100 - Math.floor((x.pv / viemax) * 100)
         if (viereste > 51 && viereste < 81){
             pvadversaire.className = "adversaire progress-bar bg-warning progress-bar-animated"
@@ -98,6 +105,7 @@ export class Pokemon {
         const viemax = 100
         x.pv -= this.btn4.puissance
         console.log(`${this.nom} utilise ${this.btn4.nom} !\nIl inflige ${this.btn4.puissance} points de dégats\n${x.nom} a ${x.pv} PV`);
+        txtCombat.innerHTML = `${this.nom} utilise ${this.btn4.nom} !\nIl inflige ${this.btn4.puissance} points de dégats\n${x.nom} a ${x.pv} PV`
         let viereste = 100 - Math.floor((x.pv / viemax) * 100)
         if (viereste > 51 && viereste < 81){
             pvadversaire.className = "adversaire progress-bar bg-warning progress-bar-animated"
@@ -113,6 +121,7 @@ export class Pokemon {
         const viemaxAdv = 100
         x.pv -= this.btn1.puissance
         console.log(`${this.nom} utilise ${this.btn1.nom} !\nIl inflige ${this.btn1.puissance} points de dégats\n${x.nom} a ${x.pv} PV`);
+        txtCombat.innerHTML = `${this.nom} utilise ${this.btn1.nom} !\nIl inflige ${this.btn1.puissance} points de dégats\n${x.nom} a ${x.pv} PV`
         let vieresteAdv = 100 - Math.floor((x.pv / viemaxAdv) * 100)
         if (vieresteAdv > 51 && vieresteAdv < 81){
             pvpersonnage.className = "personnage progress-bar bg-warning progress-bar-animated"
@@ -128,6 +137,7 @@ export class Pokemon {
         const viemaxAdv = 100
         x.pv -= this.btn2.puissance
         console.log(`${this.nom} utilise ${this.btn2.nom} !\nIl inflige ${this.btn2.puissance} points de dégats\n${x.nom} a ${x.pv} PV`);
+        txtCombat.innerHTML = `${this.nom} utilise ${this.btn2.nom} !\nIl inflige ${this.btn2.puissance} points de dégats\n${x.nom} a ${x.pv} PV`
         let vieresteAdv = 100 - Math.floor((x.pv / viemaxAdv) * 100)
         if (vieresteAdv > 51 && vieresteAdv < 81){
             pvpersonnage.className = "personnage progress-bar bg-warning progress-bar-animated"
@@ -143,6 +153,7 @@ export class Pokemon {
         const viemaxAdv = 100
         x.pv -= this.btn3.puissance
         console.log(`${this.nom} utilise ${this.btn3.nom} !\nIl inflige ${this.btn3.puissance} points de dégats\n${x.nom} a ${x.pv} PV`);
+        txtCombat.innerHTML = `${this.nom} utilise ${this.btn3.nom} !\nIl inflige ${this.btn3.puissance} points de dégats\n${x.nom} a ${x.pv} PV`
         let vieresteAdv = 100 - Math.floor((x.pv / viemaxAdv) * 100)
         if (vieresteAdv > 51 && vieresteAdv < 81){
             pvpersonnage.className = "personnage progress-bar bg-warning progress-bar-animated"
@@ -158,6 +169,7 @@ export class Pokemon {
         const viemaxAdv = 100
         x.pv -= this.btn4.puissance
         console.log(`${this.nom} utilise ${this.btn4.nom} !\nIl inflige ${this.btn4.puissance} points de dégats\n${x.nom} a ${x.pv} PV`);
+        txtCombat.innerHTML = `${this.nom} utilise ${this.btn4.nom} !\nIl inflige ${this.btn4.puissance} points de dégats\n${x.nom} a ${x.pv} PV`
         let vieresteAdv = 100 - Math.floor((x.pv / viemaxAdv) * 100)
         if (vieresteAdv > 51 && vieresteAdv < 81){
             pvpersonnage.className = "personnage progress-bar bg-warning progress-bar-animated"

@@ -10,10 +10,21 @@
     border: 2px solid black;
     margin-left: 29.15%;
 }
+#tableauTexte{
+    width: 40vw;
+    height: 10vh;
+    border: 2px solid grey;
+    margin-left: 29.15%;
+    background-color: rgb(60, 60, 60);
+    color: yellowgreen;
+}
 .skill:hover{
     border: 1px solid red !important;
 }
 
 .cadrePoke{
     background-color: #f0f0d0;
+}
+.parametres{
+    margin-left: 29.15%;
 }
