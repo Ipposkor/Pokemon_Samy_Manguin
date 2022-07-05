@@ -22,14 +22,14 @@ export class Attaques {
 }
 
 // Création des Techniques
-export let vampipoing = new Attaques ("Vampi-Poing",75,100,10,"combat")
-export let machpunch = new Attaques ("Mach Punch",40,100,30,"combat")
-export let poingeclair = new Attaques ("Poing Eclair",75,100,15,"électrique")
-export let tourrapide = new Attaques ("Tour Rapide",20,100,40,"normal")
-export let piedvoltige = new Attaques ("Pied Voltige",130,90,10,"combat")
-export let sabotage = new Attaques ("Sabotage",65,100,20,"ténèbres")
-export let lamederoc = new Attaques ("Lame de Roc",100,80,5,"roche")
-export let directtoxic = new Attaques ("Direct Toxik",80,100,20,"poison")
+export let vampipoing = new Attaques ("Vampi-Poing",8,100,10,"combat")
+export let machpunch = new Attaques ("Mach Punch",4,100,30,"combat")
+export let poingeclair = new Attaques ("Poing Eclair",8,100,15,"électrique")
+export let tourrapide = new Attaques ("Tour Rapide",2,100,40,"normal")
+export let piedvoltige = new Attaques ("Pied Voltige",13,90,10,"combat")
+export let sabotage = new Attaques ("Sabotage",7,100,20,"ténèbres")
+export let lamederoc = new Attaques ("Lame de Roc",10,80,5,"roche")
+export let directtoxic = new Attaques ("Direct Toxik",8,100,20,"poison")
 
 // Création de la classe Pokémon
 export class Pokemon {
@@ -48,14 +48,14 @@ export class Pokemon {
         this.btn4 = btn4
     }
     attaque1(x){
-        const viemax = kicklee.pv
+        const viemax = 100
         console.log(viemax);
         x.pv -= this.btn1.puissance
         console.log(x.pv);
         let viereste = 100-Math.floor((x.pv/viemax)*100)
         console.log(viereste);
-        // pvadversaire.removeAttribute("style")
-        // pvadversaire.setAttribute("style",`width: ${100-Math.floor((this.btn1.puissance/viemax)*100)}%`)
+        pvadversaire.removeAttribute("style")
+        pvadversaire.setAttribute("style",`width: ${100-viereste}%`)
     }
     attaque2(x){
         x.pv -= this.btn2.puissance

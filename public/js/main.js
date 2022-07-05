@@ -13,5 +13,10 @@ atk3.innerHTML = tygnon.btn3.nom
 atk4.innerHTML = tygnon.btn4.nom
 
 atk1.addEventListener('click',function(){
+    if (kicklee.pv >0){
     tygnon.attaque1(kicklee)
+    } else {
+        kicklee.pv = 0
+        console.log(`${kicklee.nom} est mort,\nVous ne pouvez plus attaquer`);
+    }
 })
